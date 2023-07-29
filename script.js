@@ -5,6 +5,12 @@ const buttonWrap = document.querySelector(".button-wrapper");
 const searchButton = document.querySelector("#search");
 const clearButton = document.querySelector("#clear");
 const imagesWrap = document.querySelector(".images-wrapper")
+const send = document.querySelector("#send");
+
+send.addEventListener("click",e=>{
+    window.open("file:///C:/Users/ozans/OneDrive/Masa%C3%BCst%C3%BC/jsprojet/index.html")
+})
+
 
 runEventListener();
 
@@ -12,6 +18,7 @@ function runEventListener(){
     form.addEventListener("submit",search);
     clearButton.addEventListener("click", clear);
 }
+
 
 
 function clear(){
@@ -42,11 +49,6 @@ function search(e){
     e.preventDefault();
 }
 
-
-
-
-
-
 function addImageToUI(url){
     const div = document.createElement("div");
     div.className = "card";
@@ -57,3 +59,5 @@ function addImageToUI(url){
     div.append(img);
     imagesWrap.append(div);
 }
+
+
